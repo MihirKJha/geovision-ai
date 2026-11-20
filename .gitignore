@@ -1,0 +1,52 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dataset
+data/raw/
+data/external/
+data/interim/
+data/processed/
+
+# Model artifacts
+artifacts/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Logs
+logs/
+*.log
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

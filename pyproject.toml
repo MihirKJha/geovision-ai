@@ -1,0 +1,28 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geovision-ai"
+version = "0.1.0"
+description = "Geospatial Computer Vision & Deep Learning"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "GeoVision AI Contributors" }
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
