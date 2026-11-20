@@ -13,6 +13,18 @@ license = { text = "MIT" }
 authors = [
     { name = "GeoVision AI Contributors" }
 ]
+dependencies = [
+    "torch",
+    "torchvision",
+    "Pillow",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -22,7 +34,14 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = "-v"
 
-[project.optional-dependencies]
-dev = [
-    "pytest",
-]
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
